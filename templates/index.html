@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web by Mr Son</title>
+</head>
+<body>
+{% extends 'base.html'%}
+{% block content%}
+<h1>Hello World!</h1>
+<p>My name is {{firstname}}</p>
+<p>{{ stuff|trim }}</p>
+<h3>favorite_pizza:</h3>
+
+{% for topping in favorite_pizza %}
+    {%if topping==41%}
+        {{topping+100}}<br/>
+    {%else %}
+        {{topping}}<br/>
+    {%endif%}
+
+{% endfor %}
+<br/><br/>
+{{favorite_pizza.4+10}}<br/>
+{{favorite_pizza.2|reverse}}
+{% endblock %}
+</body>
+</html>
