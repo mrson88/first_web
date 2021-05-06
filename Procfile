@@ -1,1 +1,1 @@
-web: gunicorn bai1:bai1
+web: gunicorn bai1:app
